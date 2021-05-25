@@ -11,3 +11,12 @@ def remove_every_other(lst):
         >>> lst
         [1, 2, 3, 4, 5]
     """
+
+    other_items = []
+
+    for count, items in enumerate(lst):
+        if (count + 1) % 2 == 0:
+            continue
+        else:
+            other_items.append(items)
+    return other_items
