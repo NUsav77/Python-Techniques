@@ -13,3 +13,10 @@ def intersection(l1, l2):
         >>> intersection([1, 2, 3], [4, 5, 6])
         []
     """
+    intersect_lst = []
+
+    for num in l1:
+        if num in l2:
+            intersect_lst.append(num)
+
+    return intersect_lst
