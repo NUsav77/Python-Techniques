@@ -11,3 +11,11 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    common = {}
+
+    for num in nums:
+        common[num] = common.get(num, 0) + 1
+    max_val = max(common.values())
+    for key, val in common.items():
+        if val == max_val:
+            return key
