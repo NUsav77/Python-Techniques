@@ -21,3 +21,11 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    already_visited = set()
+
+    for x in nums:
+        difference = goal - x
+        if difference in already_visited:
+            return (difference, x)
+        already_visited.add(x)
+    return ()
