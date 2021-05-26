@@ -21,3 +21,7 @@ def two_oldest_ages(ages):
     # you may find it helpful to research the `sorted(iter)` function, which
     # can take *any* type of list-like-thing, and returns a new, sorted list
     # from it.
+
+    ages_sorted = list(sorted(set(ages)))
+    oldest = (ages_sorted[-2], ages_sorted[-1])
+    return oldest
