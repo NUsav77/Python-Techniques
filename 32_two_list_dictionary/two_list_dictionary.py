@@ -15,13 +15,18 @@ def two_list_dictionary(keys, values):
         >>> two_list_dictionary(['a', 'b', 'c'], [1, 2, 3, 4])
         {'a': 1, 'b': 2, 'c': 3}
    """
+    # Stores the number of keys
     dict_size = len(keys)
+
+    # Blank dict for later
     dict_create = {}
 
+    # Checks the number of keys vs number of values. If there are more keys than values, you add 'None" to the 'values'
     if len(keys) > len(values):
         while len(values) < len(keys):
             values.append(None)
 
+    # For loop adds keys/values to the blank dict we created above
     for x in range(dict_size):
         dict_create[keys[x]] = values[x]
     return dict_create
